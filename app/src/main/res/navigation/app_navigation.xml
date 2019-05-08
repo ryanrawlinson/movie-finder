@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/app_navigation"
+            app:startDestination="@id/moviesFragment">
+    <fragment
+            android:id="@+id/moviesFragment"
+            android:name="com.ryanrawlinson.moviefinder.ui.movies.MoviesFragment"
+            android:label="fragment_movies"
+            tools:layout="@layout/fragment_movies">
+        <action
+                android:id="@+id/detailAction"
+                app:destination="@id/movieDetailFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/movieDetailFragment"
+            android:name="com.ryanrawlinson.moviefinder.ui.movie.MovieDetailFragment"
+            android:label="fragment_movie_detail"
+            tools:layout="@layout/fragment_movie_detail">
+        <!--<argument-->
+                <!--android:name="Movie"-->
+                <!--app:argType="com.ryanrawlinson.moviefinder.domain.models.Movie"-->
+                <!--android:defaultValue="@null"/>-->
+    </fragment>
+</navigation>

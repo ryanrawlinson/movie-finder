@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.movie.MovieDetailFragment">
+
+    <ImageView
+            android:id="@+id/ivMovieBackdrop"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+    <ImageView
+            android:id="@+id/ivMoviePoster"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:transitionName="posterImage"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/ivMovieBackdrop"
+            app:layout_constraintTop_toBottomOf="@id/ivMovieBackdrop"
+            app:layout_constraintBottom_toBottomOf="@id/ivMovieBackdrop"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+    <TextView
+            android:id="@+id/tvMovieTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintBottom_toBottomOf="@id/ivMovieBackdrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Avengers: Endgame"
+            android:lines="2"
+            android:ellipsize="end"
+            android:textSize="32sp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            style="@style/TextAppearance.AppCompat.Title.Inverse"
+            android:background="@drawable/bg_gradient"
+            android:lineSpacingMultiplier=".85"
+            app:layout_constraintTop_toTopOf="@+id/ivMoviePoster"/>
+
+    <TextView
+            android:id="@+id/tvMovieDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMoviePoster"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:text="@tools:sample/lorem/random"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

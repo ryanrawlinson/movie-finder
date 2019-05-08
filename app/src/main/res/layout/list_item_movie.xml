@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/clMovieCardLayout"
+            android:layout_margin="4dp">
+
+        <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:id="@+id/ivMovieImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scaleType="centerCrop"
+                android:transitionName="posterImage"
+                tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvMovieTitle"
+                app:layout_constraintStart_toEndOf="@id/ivMovieImage"
+                app:layout_constraintTop_toTopOf="@id/ivMovieImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Movie Title"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginStart="16dp"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvMovieDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvMovieTitle"
+                app:layout_constraintStart_toStartOf="@id/tvMovieTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@tools:sample/lorem/random"
+                android:lines="4"
+                android:ellipsize="end"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvReleaseDate"
+                app:layout_constraintStart_toStartOf="@id/tvMovieTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="@tools:sample/date/mmddyy"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
