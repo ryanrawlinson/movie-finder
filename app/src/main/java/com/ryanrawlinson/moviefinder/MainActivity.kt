@@ -24,13 +24,13 @@ class MainActivity : DaggerAppCompatActivity() {
 
 //        btnGetMovie.setOnClickListener { viewModel.getMovie() }
 
-        viewModel.store.observe(this) { state ->
+//        viewModel.store.observe(this) { state ->
             //            progressBar.isVisible = state.loading
 //            tvTitle.text = state.movie.title
 
-            state.error?.run {
-                Snackbar.make(clParent, this.localizedMessage, Snackbar.LENGTH_SHORT).show()
-            }
-        }
+//            state.error?.run {
+//                Snackbar.make(clParent, this.localizedMessage, Snackbar.LENGTH_SHORT).show()
+//            }
+//        }
     }
 }

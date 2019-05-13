@@ -2,14 +2,12 @@ package com.ryanrawlinson.moviefinder.ui.movie
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.transition.TransitionInflater
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.Target
-
 import com.ryanrawlinson.moviefinder.R
 import com.ryanrawlinson.moviefinder.domain.models.Movie
 import com.ryanrawlinson.moviefinder.ui.base.BaseFragment
